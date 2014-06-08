@@ -1,0 +1,49 @@
+<h1>Nolan! with an h1 tag!</h1>
+<h2>Nolan! with an h2 tag!</h2>
+<h3>Nolan! with an h3 tag!</h3>
+<h4>Nolan! with an h4 tag?</h4>
+
+<p> this is a P tag </p>
+
+<span>this is a span tag</span>
+
+<div> this is a div tag</div>
+
+<%= " I AM GOING TO PUT IN SOME RUBY HERE BUT JUST A STRING " %>
+
+<% the_array = ["a string ", "a number string", 23, "yes."] %>
+
+<% the_array.each do |array| %>
+  <li><%= array %>
+<% end %>
+
+<br></br>
+
+<% the_array.each do |array| %>
+  <li><%= array * 4 %>
+<% end %>
+
+<br></br>
+
+<h3><%= Time.now %></h3>
+
+
+</form>
+
+
+<% if @request.query['first_name'] && !@request.query['first_name'].empty? %>
+    <h2>Hello there <%= @request.query['first_name'].upcase %> </h2>
+  <% else %>
+    Tell me who you are.    
+<% end %>
+
+<form method='post' action="<%= @request.path %>">
+    Who dis?: <input type="text" name="first_name" placeholder='wooo!'/><br />
+    <input type="submit" value="Submit" />
+
+
+<br></br>
+
+<form method='post' action="/nolan">
+  Are you a human? <input type="checkbox" name="verify" /><br />
+</form>
